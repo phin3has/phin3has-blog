@@ -1,6 +1,6 @@
 baseURL = 'https://phin3has.blog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Phin3has Tech Blog'
 theme = 'terminal'
 pagination.pagerSize = 5
 
@@ -32,7 +32,3 @@ pagination.pagerSize = 5
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
