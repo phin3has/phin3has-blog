@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on </title>
+    <link>//localhost:1313/about/</link>
+    <description>Recent content in About on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jan 2025 21:42:24 -0700</lastBuildDate>
+    <atom:link href="//localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/about/</link>
+      <pubDate>Sun, 12 Jan 2025 21:42:24 -0700</pubDate>
+      <guid>//localhost:1313/about/about/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;&#xA;&lt;p&gt;I’m Phin3has, a seasoned Security Engineering professional with over 15 years of experience in cybersecurity, specializing in cloud infrastructure, DevSecOps, and risk management. My journey into tech began with a fascination for computers, sparked by the challenges of securing complex systems. Over the years, I’ve cultivated a passion for building resilient, scalable solutions that enable innovation without sacrificing security. Whether it’s designing disaster-resilient data platforms or streamlining AWS access to improve security posture, I thrive at the crossroads of strategy and execution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

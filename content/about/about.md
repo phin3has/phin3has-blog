@@ -11,7 +11,3 @@ My love for problem-solving extends beyond my day job. I created this blog to do
 
 When I’m not immersed in all things cybersecurity, I’m exploring the great outdoors with my family, cheering on my favorite sports teams, or hunting for the world’s greatest cheeseburger (recommendations welcome). This blog is as much about my professional growth as it is about celebrating the joy of learning and the connections we make along the way. Dive in and join me on this journey!
 
-# Find me
-[LinkedIn](https://www.linkedin.com/in/brandonedmunds/)
-[GitHub](https://github.com/phin3has)
-
