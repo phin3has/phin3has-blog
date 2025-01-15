@@ -1,7 +1,7 @@
 baseURL = 'https://phin3has.blog/'
 languageCode = 'en-us'
 title = 'Phin3has Tech Blog'
-theme = 'terminal'
+theme = 'poison'
 pagination.pagerSize = 5
 
 [markup.goldmark.renderer]
