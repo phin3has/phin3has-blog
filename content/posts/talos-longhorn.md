@@ -1,6 +1,6 @@
 +++
 date = '2025-01-27T23:30:44-07:00'
-draft = true
+draft = false
 title = 'Talos Longhorn'
 +++
 # Installing Longhorn on Talos Linux: A Step-by-Step Guide
