@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2025 21:42:24 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2025 23:30:44 -0700</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talos Longhorn</title>
+      <link>//localhost:1313/posts/talos-longhorn/</link>
+      <pubDate>Mon, 27 Jan 2025 23:30:44 -0700</pubDate>
+      <guid>//localhost:1313/posts/talos-longhorn/</guid>
+      <description>&lt;h1 id=&#34;installing-longhorn-on-talos-linux-a-step-by-step-guide&#34;&gt;Installing Longhorn on Talos Linux: A Step-by-Step Guide&lt;/h1&gt;&#xA;&lt;p&gt;Longhorn provides cloud-native distributed block storage for Kubernetes. This guide walks through setting up Longhorn on a Talos Linux cluster, addressing common pitfalls and requirements.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A running Talos Linux cluster&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;kubectl&lt;/code&gt; configured to access your cluster&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;talosctl&lt;/code&gt; configured for your cluster&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;required-talos-extensions&#34;&gt;Required Talos Extensions&lt;/h3&gt;&#xA;&lt;p&gt;Your Talos Linux cluster must have the following system extensions installed:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;iscsi-tools&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;linux-utils&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Add these to your Talos Linux machine configuration:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About</title>
       <link>//localhost:1313/about/about/</link>
