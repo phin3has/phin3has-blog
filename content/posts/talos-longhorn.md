@@ -1,10 +1,8 @@
 +++
 date = '2025-01-27T23:30:44-07:00'
 draft = false
-title = 'Talos Longhorn'
+title = 'Installing Longhorn on Talos Linux: A Step-by-Step Guide'
 +++
-# Installing Longhorn on Talos Linux: A Step-by-Step Guide
-
 Longhorn provides cloud-native distributed block storage for Kubernetes. This guide walks through setting up Longhorn on a Talos Linux cluster, addressing common pitfalls and requirements.
 
 ## Prerequisites
