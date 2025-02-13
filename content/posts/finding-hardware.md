@@ -1,10 +1,8 @@
 +++
 date = '2025-02-12T19:20:42-07:00'
 draft = false
-title = 'Finding Hardware'
+title = 'Getting Started with Home Lab Equipment on a Budget'
 +++
-
-# Getting Started with Home Lab Equipment on a Budget
 
 Setting up a home lab doesn't have to break the bank. In fact, you can begin your journey with hardware you might already own or can acquire inexpensively. Let me share some practical strategies for building your lab without emptying your wallet.
 
