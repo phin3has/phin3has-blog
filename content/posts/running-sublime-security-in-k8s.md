@@ -53,48 +53,47 @@ Before we start this adventure, make sure you have:
 
 First, let's understand what we're building. Sublime Security isn't just one container - it's an entire ecosystem:
 
+```mermaid
+graph TB
+    Internet[Internet] --> CF[Cloudflare Tunnel]
+    CF --> Traefik[Traefik Ingress]
+    Traefik --> Auth[Authentik Middleware]
+    
+    Auth --> |sublime.domain.com| Dashboard[Dashboard :3000]
+    Auth --> |sublime-api.domain.com| Mantis[Mantis API :8000]
+    
+    Mantis --> Bora[Bora-lite<br/>Task Queue]
+    Mantis --> PG[(PostgreSQL)]
+    Mantis --> Redis[(Redis)]
+    Mantis --> Strelka{Strelka}
+    Mantis --> MinIO[(MinIO<br/>S3-like)]
+    
+    Bora --> PG
+    Bora --> Redis
+    Bora --> Strelka
+    
+    Strelka --> |Components| StrelkaComp[Frontend<br/>Backend<br/>Manager<br/>Coordinator]
+    
+    Mantis --> Hydra[Hydra<br/>ML/AI]
+    Bora --> Hydra
+    
+    Dashboard --> |API Calls| Mantis
+    
+    style Internet fill:#e1e1e1
+    style CF fill:#f89620
+    style Traefik fill:#24a0ed
+    style Auth fill:#fd4e2e
+    style Dashboard fill:#4CAF50
+    style Mantis fill:#2196F3
+    style Bora fill:#FF9800
+    style PG fill:#336791
+    style Redis fill:#DC382D
+    style MinIO fill:#c72e49
+    style Hydra fill:#9C27B0
+    style Strelka fill:#00BCD4
+
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                        Internet                              │
-└────────────────────────┬────────────────────────────────────┘
-                         │
-                    Cloudflare Tunnel
-                         │
-┌────────────────────────┴────────────────────────────────────┐
-│                     Traefik Ingress                          │
-│                           │                                  │
-│                   Authentik Middleware                       │
-│                           │                                  │
-│    ┌──────────────────────┴──────────────────────┐         │
-│    │                                              │         │
-│    ▼                                              ▼         │
-│ sublime.domain.com                    sublime-api.domain.com│
-│    │                                              │         │
-│    ▼                                              ▼         │
-│ Dashboard (:3000)                          Mantis API (:8000)│
-│                                                   │         │
-│                          ┌────────────────────────┤         │
-│                          │                        │         │
-│                          ▼                        ▼         │
-│                    Bora-lite              ┌──────────────┐  │
-│                   (Task Queue)            │              │  │
-│                                          │  PostgreSQL   │  │
-│                 ┌─────────────┐         │              │  │
-│                 │   Strelka   │         └──────────────┘  │
-│                 │  Frontend   │                            │
-│                 │  Backend    │         ┌──────────────┐  │
-│                 │  Manager    │         │              │  │
-│                 │ Coordinator │         │    Redis     │  │
-│                 └─────────────┘         │              │  │
-│                                         └──────────────┘  │
-│                 ┌─────────────┐                            │
-│                 │             │         ┌──────────────┐  │
-│                 │   Hydra     │         │              │  │
-│                 │  (ML/AI)    │         │    MinIO     │  │
-│                 │             │         │   (S3-like)  │  │
-│                 └─────────────┘         └──────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-```
+
 
 ## Step 2: Setting Up the Namespace and Secrets
 
