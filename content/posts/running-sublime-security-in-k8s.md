@@ -53,7 +53,7 @@ Before we start this adventure, make sure you have:
 
 First, let's understand what we're building. Sublime Security isn't just one container - it's an entire ecosystem:
 
-```mermaid
+{{< mermaid >}}
 graph TB
     Internet[Internet] --> CF[Cloudflare Tunnel]
     CF --> Traefik[Traefik Ingress]
@@ -91,8 +91,8 @@ graph TB
     style MinIO fill:#c72e49
     style Hydra fill:#9C27B0
     style Strelka fill:#00BCD4
+{{< /mermaid >}}
 
-```
 
 
 ## Step 2: Setting Up the Namespace and Secrets

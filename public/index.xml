@@ -6,8 +6,29 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2025 21:42:24 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jul 2025 11:41:42 -0600</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Sublime Security in K8s</title>
+      <link>//localhost:1313/posts/running-sublime-security-in-k8s/</link>
+      <pubDate>Sat, 26 Jul 2025 11:41:42 -0600</pubDate>
+      <guid>//localhost:1313/posts/running-sublime-security-in-k8s/</guid>
+      <description>&lt;h1 id=&#34;sublime-security-on-kubernetes-a-home-labbers-journey-through-email-security-and-sso-poo&#34;&gt;Sublime Security on Kubernetes: A Home Labber&amp;rsquo;s Journey Through Email Security and SSO Poo&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Or: How I Spent Two Days Fighting Authentik SAML Only to Discover It Was a Simple Environment Variable&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-beginning-this-looks-cool&#34;&gt;The Beginning: &amp;ldquo;This Looks Cool!&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;Picture this: It&amp;rsquo;s a Thursday evening and you stumble upon Sublime Security - an &amp;ldquo;open&amp;rdquo; email security platform that promises to protect your homelab email with the same sophistication as enterprise solutions. Their Docker quickstart? One line: &lt;code&gt;curl -sL https://sublime.security/install.sh | sh&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started with Home Lab Equipment on a Budget</title>
+      <link>//localhost:1313/posts/finding-hardware/</link>
+      <pubDate>Wed, 12 Feb 2025 19:20:42 -0700</pubDate>
+      <guid>//localhost:1313/posts/finding-hardware/</guid>
+      <description>&lt;p&gt;Setting up a home lab doesn&amp;rsquo;t have to break the bank. In fact, you can begin your journey with hardware you might already own or can acquire inexpensively. Let me share some practical strategies for building your lab without emptying your wallet.&lt;/p&gt;&#xA;&lt;h2 id=&#34;starting-with-what-you-have&#34;&gt;Starting with What You Have&lt;/h2&gt;&#xA;&lt;p&gt;Your first server doesn&amp;rsquo;t need to be anything fancy. An old laptop gathering dust in your closet, a retired desktop PC, or even a modest Raspberry Pi can serve as an excellent starting point. These devices are perfect for learning the basics of server management, containerization, and networking without any additional investment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Longhorn on Talos Linux: A Step-by-Step Guide</title>
+      <link>//localhost:1313/posts/talos-longhorn/</link>
+      <pubDate>Mon, 27 Jan 2025 23:30:44 -0700</pubDate>
+      <guid>//localhost:1313/posts/talos-longhorn/</guid>
+      <description>&lt;p&gt;Longhorn provides cloud-native distributed block storage for Kubernetes. This guide walks through setting up Longhorn on a Talos Linux cluster, addressing common pitfalls and requirements.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A running Talos Linux cluster&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;kubectl&lt;/code&gt; configured to access your cluster&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;talosctl&lt;/code&gt; configured for your cluster&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;required-talos-extensions&#34;&gt;Required Talos Extensions&lt;/h3&gt;&#xA;&lt;p&gt;Your Talos Linux cluster must have the following system extensions installed:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;iscsi-tools&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;linux-utils&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Add these to your Talos Linux machine configuration:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;customization&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;systemExtensions&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;officialExtensions&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ghcr.io/siderolabs/iscsi-tools&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ghcr.io/siderolabs/util-linux-tools&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;1-configure-talos-worker-nodes&#34;&gt;1. Configure Talos Worker Nodes&lt;/h2&gt;&#xA;&lt;p&gt;Longhorn requires specific kernel modules to be loaded on worker nodes. Update your Talos worker configuration to include these modules:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About</title>
       <link>//localhost:1313/about/about/</link>
